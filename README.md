@@ -178,7 +178,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 👨‍💻 Author Information
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@yourusername](https://github.com/Himanshu-dev02)
 - LinkedIn: [Your Profile](https://www.linkedin.com/in/%20himanshu-meshram-hm)
 
  
