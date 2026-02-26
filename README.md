@@ -17,7 +17,9 @@
 AI Invoice Generator is a modern, high-performance web application designed to streamline the invoicing process for freelancers and small businesses. Leveraging the power of Google Gemini AI, it automates invoice creation and professional email reminders, ensuring a seamless financial workflow.
 
 ---
+🌐 Live Demo
 🔗 https:[live-link](https://frontend-ohcm-nb6htlnq4-himanshu-dev02s-projects.vercel.app/)
+---
 ## 🏗️ Technologies Used
 
 - **Frontend**: Built with **React 19** and **Vite** for a blazing fast UI, styled with **Tailwind CSS 4**.
