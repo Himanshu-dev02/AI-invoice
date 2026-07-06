@@ -18,7 +18,7 @@ AI Invoice Generator is a modern, high-performance web application designed to s
 
 ---
 🌐 Live Demo
-🔗 https:[live-link](https://frontend-ohcm-nb6htlnq4-himanshu-dev02s-projects.vercel.app/)
+🔗 https:[live-link](https://frontend-six-fawn-54.vercel.app/)
 ---
 ## 🏗️ Technologies Used
 
