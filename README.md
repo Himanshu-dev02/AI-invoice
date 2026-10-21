@@ -179,7 +179,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Author Information
 
-**Your Name**
+**Himanshu Meshram**
 - GitHub: [Himanshu-dev02](https://github.com/Himanshu-dev02)
 - LinkedIn: [Himanshu_Meshram](https://www.linkedin.com/in/%20himanshu-meshram-hm)
 
