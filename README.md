@@ -167,17 +167,20 @@ All endpoints require a signed-in Clerk user unless noted.
 
 ---
 
+
 ## 📸 Screenshots
 
-| Dashboard | Invoice Management |
+|  Dashboard | Invoice Management |
 | :---: | :---: |
-| ![Dashboard](../frontend/src/assets/Dashboard.png) | ![Invoice management](../frontend/src/assets/invoice%20management.png) |
+| ![Dashboard](./frontend/src/assets/Dashboard.png) | ![Invoice management](./frontend/src/assets/invoice%20management.png) |
 
-| AI Invoice Generator | AI Reminder |
+| AI Invoice Generator |  AI Reminder  |
 | :---: | :---: |
-| ![AI invoice](../frontend/src/assets/AI%201.png) | ![AI reminder](../frontend/src/assets/AI%202.png) |
+| ![AI invoice](./frontend/src/assets/AI%201.png) | ![AI reminder](./frontend/src/assets/AI%202.png) |
 
 ---
+
+ 
  
 
 ## 🔮 Roadmap
