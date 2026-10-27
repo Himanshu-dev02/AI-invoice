@@ -1,187 +1,228 @@
 # AI Invoice Generator ✨
-![Invoice Generator Cover](./frontend/src/assets/Hero.png)
 
- 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+![Invoice Generator Cover](./src/assets/Hero.png)
+
+[![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://javascript.info/)
+[![Express.js](https://img.shields.io/badge/Express_5-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)](https://clerk.com/)
-[![Gemini AI](https://img.shields.io/badge/Gemini_AI-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Gemini AI](https://img.shields.io/badge/Gemini_AI-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 
-### *Intelligent Invoicing Powered by AI*
+### *Describe the job in plain English. Get a ready-to-send invoice.*
 
-AI Invoice Generator is a modern, high-performance web application designed to streamline the invoicing process for freelancers and small businesses. Leveraging the power of Google Gemini AI, it automates invoice creation and professional email reminders, ensuring a seamless financial workflow.
+AI Invoice Generator helps freelancers and small businesses create GST-ready invoices in seconds. Type a sentence such as *"Website redesign for Acme Corp, 3 pages at ₹15,000 each, due in 14 days"* and Gemini turns it into a structured invoice. It can also draft a polite payment-reminder email for any unpaid invoice.
 
----
-🌐 Live Demo
-🔗 https:[live-link](https://frontend-six-fawn-54.vercel.app/)
----
-## 🏗️ Technologies Used
-
-- **Frontend**: Built with **React 19** and **Vite** for a blazing fast UI, styled with **Tailwind CSS 4**.
-- **Backend**: Powered by **Node.js** and **Express 5** for robust API management.
-- **Database**: **MongoDB** managed via **Mongoose** for flexible data storage.
-- **Artificial Intelligence**: Integrated with **Google Gemini AI** for smart content generation.
-- **Authentication**: Secured with **Clerk** for seamless user sign-ins and profile management.
-- **File Handling**: **Multer** for processing business assets like logos and signatures.
+**🌐 Live Demo:** [frontend-six-fawn-54.vercel.app](https://frontend-six-fawn-54.vercel.app/)
 
 ---
 
 ## 🚀 Features
 
-- **Smart AI Invoice Creation**: Generate comprehensive invoices instantly using intelligent AI prompts.
-- **AI-Powered Email Reminders**: Automatically draft professional, context-aware payment reminders using Gemini AI.
-- **Automatic Calculations**: Precision-tuned logic for subtotals, GST/Tax, and final amounts.
-- **Downloadable PDF Invoices**: Generate clean, professional PDF invoices directly from the browser.
-- **User Authentication**: Secure onboarding and profile management powered by Clerk.
-- **Business Profile Management**: Store company details, logos, signatures, and stamps for consistent branding.
-- **Real-time Dashboard**: Track your financial health with interactive KPI cards and status tracking.
-- **Modern Responsive UI**: A premium, glassmorphic design that works perfectly on desktop and mobile.
+**AI**
+- **Prompt-to-invoice:** describe the work in plain text and Gemini returns a structured invoice (client, line items, dates, tax) that is saved straight to your account.
+- **AI payment reminders:** generates an email subject and body for an invoice. Copy the text, or open it in your mail app through a `mailto:` link.
+- **Model fallback:** requests try `gemini-2.5-flash`, then `gemini-2.0-flash`, then `gemini-1.5-flash`, so a single unavailable model doesn't break generation.
+
+**Invoicing**
+- Create, edit, preview and delete invoices.
+- Automatic subtotal, tax (default 18% GST) and total calculation.
+- Four statuses: `draft`, `unpaid`, `paid`, `overdue`.
+- Printable invoice preview. Use **Print / Save as PDF** (browser print dialog) to export a PDF.
+- Invoice list with search, status filter, sorting and pagination.
+
+**Business profile**
+- Save business name, email, phone, address, GST number and default tax rate once.
+- Upload a logo, stamp and signature (with signer name and title) that appear on every invoice.
+
+**Dashboard**
+- KPI cards for total invoices, total paid, total unpaid and paid/unpaid percentages.
+- Amounts in other currencies are converted to INR using fixed rates defined in the code (no live exchange-rate API).
+
+**Auth**
+- Sign-in and sign-up through **Clerk**. All `/app` routes are protected, and each user only sees their own invoices.
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ Tech Stack
 
-### Frontend
-- **React 19**: Modern UI development with the latest hooks and features.
-- **Vite**: Ultra-fast build tool for a superior development experience.
-- **Tailwind CSS 4**: Functional-first styling for a sleek, responsive design.
-- **React Router 7**: Robust client-side navigation.
-- **Clerk**: Secure and easy-to-integrate authentication.
-
-### Backend
-- **Node.js & Express 5**: Scalable and fast server-side architecture.
-- **MongoDB & Mongoose**: Flexible NoSQL database for structured data storage.
-- **Google Gemini AI**: Powering the intelligent core of the application.
-- **Multer**: Handling file uploads for logos and signatures.
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, Vite 7, Tailwind CSS 4, React Router 7, Clerk (`@clerk/clerk-react`) |
+| Backend | Node.js, Express 5, Mongoose 9, Multer, Clerk (`@clerk/express`) |
+| Database | MongoDB (local or Atlas) |
+| AI | Google Gemini via `@google/genai` |
+| Deployment | Vercel (frontend and backend, see `backend/vercel.json`) |
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-AI-Invoice-Generator/
-├── frontend/             # React application
-│   ├── src/
-│   │   ├── components/   # Reusable UI components (InvoicePreview, AI Modal, etc.)
-│   │   ├── pages/        # Main application views (Dashboard, Invoices, Profile)
-│   │   └── assets/       # Styles and static assets
-├── backend/              # Node.js Express server
-│   ├── controllers/      # Business logic handlers
-│   ├── models/           # Mongoose schemas (Invoice, BusinessProfile)
-│   ├── routes/           # API endpoints
-│   └── config/           # Database and AI configurations
-└── README.md             # Project documentation
+AI-invoice/
+├── frontend/
+│   └── src/
+│       ├── components/   # AIInvoiceModal, AiReminder, InvoicePreview, KpiCard, Navbar, ...
+│       ├── pages/        # Home, Dashboard, Invoices, CreateInvoice, BusinessProfile
+│       └── assets/       # Images and style definitions
+├── backend/
+│   ├── config/           # MongoDB connection (Db.js)
+│   ├── controllers/      # invoicecontroller.js, businessProfilecontroller.js
+│   ├── models/           # invoiceModel.js, businessProfileModel.js
+│   ├── routes/           # invoiceRouter, businessProfileRouter, aiinvoiceRouter
+│   ├── uploads/          # Uploaded logos, stamps and signatures
+│   ├── server.js
+│   └── vercel.json
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup Instructions
+## ⚙️ Getting Started
 
 ### Prerequisites
-- Node.js (v18+)
-- MongoDB (Local or Atlas)
-- Clerk account for authentication
-- Google Gemini API Key
+- Node.js 18+
+- A MongoDB database (local or [Atlas](https://www.mongodb.com/atlas))
+- A [Clerk](https://clerk.com/) application (publishable key and secret key)
+- A [Google Gemini API key](https://aistudio.google.com/apikey)
 
-### Step-by-step Setup
+### 1. Clone
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/ai-invoice-generator.git
-   cd ai-invoice-generator
-   ```
+```bash
+git clone https://github.com/Himanshu-dev02/AI-invoice.git
+cd AI-invoice
+```
 
-2. **Backend Configuration**
-   - Navigate to the `backend` folder: `cd backend`
-   - Install dependencies: `npm install`
-   - Create a `.env` file and add:
-     ```env
-     PORT=4000
-     MONGO_URI=your_mongodb_uri
-     GEMINI_API_KEY=your_gemini_key
-     CLERK_SECRET_KEY=your_clerk_secret
-     ```
-   - Start the backend server: `npm start`
+### 2. Backend
 
-3. **Frontend Configuration**
-   - Navigate to the `frontend` folder: `cd ../frontend`
-   - Install dependencies: `npm install`
-   - Create a `.env` file and add:
-     ```env
-     VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-     ```
-   - Start the frontend development server: `npm run dev`
+```bash
+cd backend
+npm install
+```
+
+Create `backend/.env`:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+GEMINI_API_KEY=your_gemini_api_key
+CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+API_BASE=http://localhost:4000
+```
+
+```bash
+npm start        # runs nodemon on http://localhost:4000
+```
+
+### 3. Frontend
+
+```bash
+cd ../frontend
+npm install
+```
+
+Create `frontend/.env`:
+
+```env
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+VITE_API_BASE_URL=http://localhost:4000
+```
+
+```bash
+npm run dev      # http://localhost:5173
+```
+
+> ⚠️ Never commit `.env` files. Both `.env` files are listed in `.gitignore`.
 
 ---
 
-## ▶️ Usage Guide
+## 📡 API Reference
 
-1. **Setup Your Profile**: Go to the 'Business Profile' section to upload your logo, signature, and company details.
-2. **Create an Invoice**: Use the 'Create Invoice' page. You can fill details manually or use the AI prompt to generate items automatically.
-3. **Manage Invoices**: View all generated invoices on the 'Invoices' dashboard.
-4. **Send Reminders**: Use the AI Mail icon on any invoice to generate a professional reminder email.
-5. **Print/Save**: Click on any invoice to preview it and use the "Print / Save as PDF" button.
+All endpoints require a signed-in Clerk user unless noted.
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/invoice` | List the current user's invoices |
+| `GET` | `/api/invoice/:id` | Get one invoice (by ID or invoice number) |
+| `POST` | `/api/invoice` | Create an invoice |
+| `PUT` | `/api/invoice/:id` | Update an invoice |
+| `DELETE` | `/api/invoice/:id` | Delete an invoice |
+| `GET` | `/api/businessProfile/me` | Get the current user's business profile |
+| `POST` | `/api/businessProfile` | Create a business profile (multipart, with logo, stamp and signature) |
+| `PUT` | `/api/businessProfile/:id` | Update a business profile |
+| `POST` | `/api/ai/generate` | Body `{ prompt }`. Returns a structured invoice as JSON |
+| `POST` | `/api/ai/reminder` | Body `{ invoiceId, clientName, amount, ... }`. Returns `{ subject, body }` |
+
+---
+
+## ▶️ How to Use
+
+1. **Set up your business profile.** Add your details, logo, signature and stamp.
+2. **Create an invoice.** Fill in the form, or open the AI generator and describe the job in plain text.
+3. **Manage invoices.** Search, filter by status, edit or delete from the Invoices page.
+4. **Send a reminder.** Click the AI mail icon on an invoice, generate a draft, then copy it or open it in your email app.
+5. **Export.** Open an invoice preview and choose **Print / Save as PDF**.
 
 ---
 
 ## 📸 Screenshots
 
-| Dashboard View | Invoice Management |
+| Dashboard | Invoice Management |
 | :---: | :---: |
-| ![Dashboard Placeholder](./frontend/src/assets/Dashboard.png) | ![Create Invoice Placeholder](./frontend/src/assets/invoice%20management.png) |
+| ![Dashboard](./src/assets/Dashboard.png) | ![Invoice management](./src/assets/invoice%20management.png) |
 
-| AI-Invoice Genrator|  AI Reminder Modal |
+| AI Invoice Generator | AI Reminder |
 | :---: | :---: |
-| ![AI invoice ](./frontend/src/assets/AI%201.png) | ![Ai Reminder](./frontend/src/assets/AI%202.png) |
+| ![AI invoice](./src/assets/AI%201.png) | ![AI reminder](./src/assets/AI%202.png) |
 
 ---
 
-## 🌟 Key Highlights
+## 🧭 Known Limitations
 
-- **ATS-Friendly Schema**: Optimized project structure and documentation.
-- **AI Integration**: First-class support for Generative AI in financial workflows.
-- **Zero-Latency UI**: Optimized React components for a snappy user experience.
-- **End-to-End Security**: Clerk-powered auth ensures data privacy.
+- Uploaded logos, stamps and signatures are saved to the server's local `uploads/` folder. On serverless hosts such as Vercel this storage is not persistent, so use cloud storage (Cloudinary or S3) for production.
+- Reminder emails are drafted by AI but not sent automatically.
+- PDF export uses the browser's print dialog rather than a server-side PDF generator.
+- Dashboard currency conversion uses fixed rates, not live exchange rates.
+- No automated tests yet.
 
----
+## 🔮 Roadmap
 
-## 🔮 Future Improvements
-
-- [ ] Multi-currency support for international invoicing.
-- [ ] Integration with payment gateways (Stripe/PayPal).
-- [ ] Advanced analytics and expense tracking.
-- [ ] Team collaboration features.
+- [ ] Cloud storage for uploaded assets
+- [ ] Send reminders directly by email (Resend or Nodemailer)
+- [ ] Automatic overdue status based on due date
+- [ ] Payment gateway integration (Stripe, Razorpay)
+- [ ] Multi-currency support with live exchange rates
+- [ ] Rate limiting and request validation on AI endpoints
+- [ ] Unit and integration tests for tax calculations and API routes
+- [ ] Team collaboration
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the project
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "feat: add your feature"`
+4. Push the branch: `git push origin feature/your-feature`
+5. Open a pull request
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for details.
 
 ---
 
-## 👨‍💻 Author Information
+## 👨‍💻 Author
 
 **Himanshu Meshram**
-- GitHub: [Himanshu-dev02](https://github.com/Himanshu-dev02)
-- LinkedIn: [Himanshu_Meshram](https://www.linkedin.com/in/%20himanshu-meshram-hm)
+
+- GitHub: [@Himanshu-dev02](https://github.com/Himanshu-dev02)
+- LinkedIn: [himanshu-meshram-hm](https://www.linkedin.com/in/himanshu-meshram-hm)
+- Portfolio: [himanshumeshram.netlify.app](https://himanshumeshram.netlify.app/)
 
  
  
