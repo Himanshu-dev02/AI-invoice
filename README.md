@@ -178,14 +178,7 @@ All endpoints require a signed-in Clerk user unless noted.
 | ![AI invoice](../frontend/src/assets/AI%201.png) | ![AI reminder](../frontend/src/assets/AI%202.png) |
 
 ---
-
-## 🧭 Known Limitations
-
-- Uploaded logos, stamps and signatures are saved to the server's local `uploads/` folder. On serverless hosts such as Vercel this storage is not persistent, so use cloud storage (Cloudinary or S3) for production.
-- Reminder emails are drafted by AI but not sent automatically.
-- PDF export uses the browser's print dialog rather than a server-side PDF generator.
-- Dashboard currency conversion uses fixed rates, not live exchange rates.
-- No automated tests yet.
+ 
 
 ## 🔮 Roadmap
 
@@ -210,9 +203,7 @@ All endpoints require a signed-in Clerk user unless noted.
 
 ---
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for details.
+ 
 
 ---
 
