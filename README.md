@@ -1,6 +1,6 @@
 # AI Invoice Generator ✨
 
-![Invoice Generator Cover](./src/assets/Hero.png)
+![Invoice Generator Cover](../frontend/src/assets/Hero.png)
 
 [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -171,11 +171,11 @@ All endpoints require a signed-in Clerk user unless noted.
 
 | Dashboard | Invoice Management |
 | :---: | :---: |
-| ![Dashboard](./src/assets/Dashboard.png) | ![Invoice management](./src/assets/invoice%20management.png) |
+| ![Dashboard](../frontend/src/assets/Dashboard.png) | ![Invoice management](../frontend/src/assets/invoice%20management.png) |
 
 | AI Invoice Generator | AI Reminder |
 | :---: | :---: |
-| ![AI invoice](./src/assets/AI%201.png) | ![AI reminder](./src/assets/AI%202.png) |
+| ![AI invoice](../frontend/src/assets/AI%201.png) | ![AI reminder](../frontend/src/assets/AI%202.png) |
 
 ---
 
@@ -223,6 +223,4 @@ Distributed under the MIT License. See `LICENSE` for details.
 - GitHub: [@Himanshu-dev02](https://github.com/Himanshu-dev02)
 - LinkedIn: [himanshu-meshram-hm](https://www.linkedin.com/in/himanshu-meshram-hm)
 - Portfolio: [himanshumeshram.netlify.app](https://himanshumeshram.netlify.app/)
-
- 
  
